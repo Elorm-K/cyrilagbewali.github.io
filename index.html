@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyril Agbewali-Koku | CS PhD Student & Researcher</title>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary: #003263; /* Deep Academic Blue */
+            --accent: #00B0F0; /* Light Blue for highlights */
+            --text: #333333;
+            --bg: #F9FAFB;
+            --white: #FFFFFF;
+            --gray: #666666;
+            --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-main);
+            color: var(--text);
+            background-color: var(--bg);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- LAYOUT UTILITIES --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        h1, h2, h3 { color: var(--primary); line-height: 1.2; }
+        h2 { font-size: 1.8rem; margin-bottom: 30px; border-left: 5px solid var(--accent); padding-left: 15px; }
+        
+        /* --- HEADER & NAV --- */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); }
+        
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--gray); }
+        .nav-links a:hover { color: var(--primary); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .hero-content h1 { font-size: 3rem; margin-bottom: 15px; }
+        .hero-content .subtitle { font-size: 1.3rem; color: var(--gray); margin-bottom: 25px; }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        .btn:hover { background: #002244; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: var(--white); }
+
+        /* --- PUBLICATIONS & CARDS --- */
+        .card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            margin-bottom: 20px;
+            border-left: 4px solid transparent;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-left: 4px solid var(--accent);
+        }
+
+        .card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .card .meta { font-size: 0.9rem; color: var(--gray); margin-bottom: 10px; font-style: italic; }
+        .tags span {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+        }
+
+        /* --- SKILLS GRID --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .skill-item h4 { margin-bottom: 10px; color: var(--primary); }
+
+        /* --- CONTACT --- */
+        .contact-links { margin-top: 20px; }
+        .contact-links a { margin-right: 20px; font-weight: 600; color: var(--primary); }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .nav-links { display: none; } /* Simplified for demo */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">C. Agbewali-Koku</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#publications">Research</a></li>
+                    <li><a href="#experience">Teaching & Exp</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cyril Agbewali-Koku</h1>
+                <p class="subtitle">PhD Student in Computer Science @ University of Maine</p>
+                <p style="max-width: 600px; margin-bottom: 30px; color: var(--gray);">
+                    Researching the intersection of <strong>Machine Learning</strong>, <strong>Generative AI</strong>, and <strong>Education Technology</strong>. Currently exploring how AI can optimize learning outcomes while serving as a Python Lab Coordinator.
+                </p>
+                <a href="mailto:cyrilagbewali@gmail.com" class="btn">Get in Touch</a>
+                <a href="path-to-your-cv.pdf" class="btn btn-outline" target="_blank">Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications">
+        <div class="container">
+            <h2>Publications & Research</h2>
+            
+            <div class="card">
+                <h3>A Systematic Review of Machine Learning Techniques in Online Learning Platforms</h3>
+                <p class="meta">Published in IEEE International Symposium on Embedded Multicore/Many-core Systems-on-Chip (2022)</p>
+                <p>Authored a systematic review analyzing how various ML algorithms are deployed in modern LMS environments.</p>
+                <div class="tags" style="margin-top:10px;">
+                    <span>Machine Learning</span> <span>EdTech</span> <span>Systematic Review</span>
+                </div>
+                <div style="margin-top: 15px;">
+                    <a href="https://doi.org/10.1109/MCSoC57363.2022.00046" target="_blank" style="color:var(--accent); font-weight:600;">View DOI &rarr;</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Gradual Incorporation of AI into LMS: Using MOODLE as a Case Study</h3>
+                <p class="meta">MSc Thesis | Daffodil International University (2023)</p>
+                <p>Investigated the modular integration of AI plugins into Moodle to personalize student learning paths.</p>
+                <div class="tags" style="margin-top:10px;">
+                    <span>Moodle</span> <span>AI Integration</span> <span>PHP/Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEACHING & EXPERIENCE -->
+    <section id="experience">
+        <div class="container">
+            <h2>Teaching & Industry Experience</h2>
+
+            <div class="card">
+                <h3>Graduate Teaching Assistant & Lab Coordinator</h3>
+                <p class="meta">University of Maine | Jan 2024 - Present</p>
+                <ul>
+                    <li>• Coordinate laboratory sessions for the Introduction to Python course.</li>
+                    <li>• Mentor undergraduate students in debugging, algorithms, and data structures.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Lead Technical Instructor</h3>
+                <p class="meta">STEMED Bangladesh | 2023</p>
+                <p>Designed and implemented comprehensive coding curricula (Python, Web Basics) for students ages 8-16.</p>
+            </div>
+
+            <div class="card">
+                <h3>WordPress Developer & Manager</h3>
+                <p class="meta">YellowCode / Soronko Solutions | 2020 - 2021</p>
+                <p>Managed full-stack web projects, customized WordPress themes using PHP/JS, and led a team of interns.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS -->
+    <section id="skills" style="background-color: var(--white);">
+        <div class="container">
+            <h2>Technical Arsenal</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h4>Languages</h4>
+                    <p>Python, JavaScript (ES6+), Java, SQL, PHP, HTML5/CSS3</p>
+                </div>
+                <div class="skill-item">
+                    <h4>AI & Data</h4>
+                    <p>TensorFlow, NumPy, Scikit-learn, Pandas, Computer Vision</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Web & Tools</h4>
+                    <p>React, WordPress, Moodle, Git, Figma, VS Code</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+            <h2>Select Projects</h2>
+            <div class="card">
+                <h3>Cloud-Based Student Information System</h3>
+                <p>Designed and implemented a cloud-based Android application for managing student data and academic records.</p>
+                <div class="tags" style="margin-top:10px;">
+                    <span>Android</span> <span>Cloud Computing</span> <span>Java</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Farm Waste Solution (Lean Research)</h3>
+                <p>Utilized MIT LEAN research methods to design sustainable agricultural waste solutions in Ghana.</p>
+                <div class="tags" style="margin-top:10px;">
+                    <span>Research Methodology</span> <span>Sustainability</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="background: var(--primary); color: white; padding: 40px 0; text-align: center;">
+        <div class="container">
+            <h3 style="color: white;">Cyril Agbewali-Koku</h3>
+            <p>PhD Student • Researcher • Developer</p>
+            <div class="contact-links" style="margin-top: 20px;">
+                <a href="https://linkedin.com/in/CyrilAgbewali" style="color: var(--accent);">LinkedIn</a>
+                <a href="mailto:cyrilagbewali@gmail.com" style="color: var(--accent);">Email</a>
+                <a href="#" style="color: var(--accent);">Google Scholar</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.8rem; color: #aaa;">&copy; 2025 Cyril Agbewali-Koku</p>
+        </div>
+    </footer>
+
+</body>
+</html>
